@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact us</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'css/feedback2.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+</head>
+<body>
+	<div class="header">
+		<div class="containers">
+		  <h1>Vegetable Price Prediction
+		  </h1>
+		  <nav>
+			<ul>
+				<li><a href="{% url 'home' %}">Home</a></li>
+			  <li><a href="{% url 'contact' %}">Contact Us</a></li>
+			  <li><a href="{% url 'about' %}">About</a></li>
+			  <li><a href="{% url 'logout' %}">Logout</a></li>
+			</ul>
+		  </nav>
+		</div>
+		</div>
+	<div class="container">
+		<form action="/feedback" method="post">
+			{% csrf_token %}
+		<div class="contact-box">
+			<div class="left"></div>
+			<div class="right">
+				<h2>Give Feedback</h2>
+				<label for="name"><input type="text"  class="field" id="name" name="name" placeholder="Your Name"></label>	
+				<label for="email"><input type="text" class="field" id="email" name="email" placeholder="Your Email"></label>
+				<label for="phonenumber"><input type="text" class="field" id="phonenumber" name="phonenumber" placeholder="Phone"></label>
+				<label for="feedback"><textarea placeholder="Comment" name="feedback" class="field"></textarea></label>
+				<button class="btn">Send</button>
+			</div>
+		</div>
+	</form>
+	</div>
+</body>
+</html>

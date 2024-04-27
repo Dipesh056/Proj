@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <h1>Vegetable Price Prediction
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
+          <li><a href="{% url 'feedback' %}">Feedback</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+    </div>
+  <div class="main-content">
+    <div class="pred">
+      {% if result %}
+          <h2>The Prediction Result fot the vegetable is : </h2>
+          <h2>{{ result }}</h2>
+          <h2>Rs </h2>
+      {% endif %}
+  </div>
+  <form method="post" action="{% url 'predict' %}">
+      {% csrf_token %}
+      <label for="age">Vegetable</label>
+      <input type="" id="age" name="Vegetable" required><br><br>
+
+      <label for="blood_pressure">season</label>
+      <input type="" id="blood_pressure" name="season" required><br><br>
+      
+      <label for="sugar">Month</label>
+      <input type="" id="blood_pressure" name="Month" required><br><br>
+
+      <label for="sugar">Temperature</label>
+      <input type="" id="blood_pressure" name="Temperature" required><br><br>
+      
+      <label for="blood_urea">Disaster_happend</label>
+      <input type="" id="blood_pressure" name="Disaster_happend" required><br><br>
+      
+      <label for="sodium">Vegetable_condition</label>
+      <input type="" id="blood_pressure" name="Vegetable_condition" required><br><br>      
+      <!-- Add more input fields for other features -->
+        <!-- Add more input fields for other features -->
+        
+      <input type="submit" value="Predict">
+  </form>
+</div>
+</body>
+</html>

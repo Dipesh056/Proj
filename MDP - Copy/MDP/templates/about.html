@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <h1>Vegetable Price Prediction
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'feedback' %}">Feedback</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+    </div>
+    <div class="main">
+    <main>
+      <section class="team-members">
+        <div class="member" onmouseover="showInfo(this)" onmouseout="hideInfo(this)">
+          <h2 class="name">Potato</h2>
+          <p class="info">Heavy Rate<br>Precautions</p>
+        </div>
+        <div class="member" onmouseover="showInfo(this)" onmouseout="hideInfo(this)">
+          <h2 class="name">K Chethan</h2>
+          <p class="info">Mobile: 6305038825<br>Email: kummarachethan343@gmail.com</p>
+        </div>
+        <!-- Add three more members here -->
+      </section>
+      <section class="team-members">
+        <div class="member" onmouseover="showInfo(this)" onmouseout="hideInfo(this)">
+          <h2 class="name">M Venugopala</h2>
+          <p class="info">Mobile: 9347634148<br>Email: venuvenugopalvadde@gmail.com</p>
+        </div>
+        <div class="member" onmouseover="showInfo(this)" onmouseout="hideInfo(this)">
+          <h2 class="name">K Lokesh Kumar</h2>
+          <p class="info">Mobile: 8328372680<br>Email: lokeshkumar43274@gmail.com</p>
+        </div>
+        <!-- Add three more members here -->
+      </section>
+      <section class="team-members">
+        <div class="member" onmouseover="showInfo(this)" onmouseout="hideInfo(this)">
+          <h2 class="name">OM Prakash</h2>
+          <p class="info">Mobile: 7386684307<br>Email: prakashlucky938@gmail.com</p>
+        </div>
+        <!-- Add three more members here -->
+      </section>
+    </main>
+</div>
+    <script src="{% static "JS/script.js" %} %}"></script>
+  </body>
+  </html>
